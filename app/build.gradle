@@ -24,5 +24,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.pnikosis:materialish-progress:1.7'
+
     testCompile 'junit:junit:4.12'
 }
