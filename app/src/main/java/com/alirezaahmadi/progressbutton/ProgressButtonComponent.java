@@ -2,6 +2,7 @@ package com.alirezaahmadi.progressbutton;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import com.pnikosis.materialishprogress.ProgressWheel;
 
 
 public class ProgressButtonComponent extends RelativeLayout {
+    private static final int UNDEFINED = -1;
 
     private TextView textTV;
     private ProgressWheel progressWheel;
@@ -56,10 +58,10 @@ public class ProgressButtonComponent extends RelativeLayout {
 
         try {
             buttonText = a.getString(R.styleable.ProgressButtonComponent_buttonText);
-            textColor = a.getColor(R.styleable.ProgressButtonComponent_buttonTextColor, -1);
-            textSize = a.getDimensionPixelSize(R.styleable.ProgressButtonComponent_buttonTextSize, -1);
-            progressColor = a.getColor(R.styleable.ProgressButtonComponent_progressColor, -1);
-            progressWidth = a.getDimensionPixelSize(R.styleable.ProgressButtonComponent_progressWidth, -1);
+            textColor = a.getColor(R.styleable.ProgressButtonComponent_buttonTextColor, Color.WHITE);
+            textSize = a.getDimensionPixelSize(R.styleable.ProgressButtonComponent_buttonTextSize, UNDEFINED);
+            progressColor = a.getColor(R.styleable.ProgressButtonComponent_progressColor, Color.WHITE);
+            progressWidth = a.getDimensionPixelSize(R.styleable.ProgressButtonComponent_progressWidth, UNDEFINED);
 
         } finally {
             a.recycle();
@@ -75,16 +77,13 @@ public class ProgressButtonComponent extends RelativeLayout {
 
         textTV.setText(buttonText);
 
-        if(textColor != -1)
-            textTV.setTextColor(textColor);
+        textTV.setTextColor(textColor);
+        progressWheel.setBarColor(progressColor);
 
-        if(textSize != -1)
+        if(textSize != UNDEFINED)
             textTV.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
 
-        if(progressColor != -1)
-            progressWheel.setBarColor(progressColor);
-
-        if(progressWidth != -1)
+        if(progressWidth != UNDEFINED)
             progressWheel.setBarWidth(progressWidth);
 
     }
