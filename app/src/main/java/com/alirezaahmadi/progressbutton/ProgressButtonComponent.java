@@ -124,5 +124,39 @@ public class ProgressButtonComponent extends RelativeLayout {
         return buttonText;
     }
 
+    public int getTextColor() {
+        return textColor;
+    }
 
+    public void setTextColor(int textColor) {
+        this.textColor = textColor;
+        textTV.setTextColor(textColor);
+    }
+
+    public int getTextSize() {
+        return textSize;
+    }
+
+    public void setTextSize(int pxTextSize) {
+        this.textSize = pxTextSize;
+        textTV.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
+    }
+
+    public int getProgressColor() {
+        return progressColor;
+    }
+
+    public void setProgressColor(int progressColor) {
+        this.progressColor = progressColor;
+        progressWheel.setBarColor(progressColor);
+    }
+
+    public int getProgressWidth() {
+        return progressWidth;
+    }
+
+    public void setProgressWidth(int progressWidth) {
+        this.progressWidth = progressWidth;
+        progressWheel.setBarWidth(progressWidth);
+    }
 }
