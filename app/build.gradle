@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 25
@@ -16,6 +17,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+}
+
+publish {
+    userOrg = 'alirezaahmadi'
+    groupId = 'com.alirezaahmadi'
+    artifactId = 'progress-button'
+    publishVersion = '1.0.0'
+    desc = 'Oh hi, this is a nice description for a project, right?'
+    website = 'https://github.com/novoda/bintray-release'
 }
 
 dependencies {
