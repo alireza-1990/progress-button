@@ -8,7 +8,7 @@ This is a Android Button with a progress bar over it. This is useful when you do
 ##Usage
 Import it via gradle
 ```gradle
-  compile 'com.alirezaahmadi:progress-button:1.1.1'
+  compile 'com.alirezaahmadi:progress-button:1.1.2'
 ```
 
 You can add this to view like this
