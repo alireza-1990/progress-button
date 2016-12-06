@@ -7,8 +7,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 2
-        versionName "1.1.0"
+        versionCode 3
+        versionName "1.1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -23,18 +23,12 @@ publish {
     userOrg = 'alirezaahmadi'
     groupId = 'com.alirezaahmadi'
     artifactId = 'progress-button'
-    publishVersion = '1.1.0'
+    publishVersion = '1.1.1'
     desc = 'Oh hi, this is a nice description for a project, right?'
     website = 'https://github.com/novoda/bintray-release'
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'com.pnikosis:materialish-progress:1.7'
-
-    testCompile 'junit:junit:4.12'
 }

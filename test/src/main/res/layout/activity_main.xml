@@ -18,6 +18,8 @@
         app:buttonText="test name"
         app:buttonTextSize="32dp"
         app:buttonTextColor="@color/text_color"
+        app:progressColor="#ffffff"
+        app:progressWidth="3dp"
         android:background="@drawable/btn_background"
         android:padding="16dp"
         />
