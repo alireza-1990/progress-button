@@ -8,7 +8,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 4
-        versionName "1.1.2"
+        versionName "1.4.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -20,12 +20,12 @@ android {
 }
 
 publish {
-    userOrg = 'alirezaahmadi'
+    userOrg = 'alirezaahmadi69'
     groupId = 'com.alirezaahmadi'
     artifactId = 'progress-button'
-    publishVersion = '1.1.2'
-    desc = 'Oh hi, this is a nice description for a project, right?'
-    website = 'https://github.com/novoda/bintray-release'
+    publishVersion = '1.4.0'
+    desc = 'A button with loading indicator on it'
+    website = 'https://github.com/alireza-1990/progress-button'
 }
 
 dependencies {
