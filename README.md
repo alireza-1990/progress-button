@@ -5,7 +5,7 @@ This is a Android Button with a progress bar over it. This is useful when you do
 
 <img src="/screenshots/inprogress.png" width="300px">
 
-##Usage
+## Usage
 Import it via gradle
 ```gradle
   compile 'com.alirezaahmadi:progress-button:1.1.2'
@@ -14,7 +14,7 @@ Import it via gradle
 You can add this to view like this
 ```xml
 <com.alirezaahmadi.progressbutton.ProgressButtonComponent
-    android:id="@+id/testBtn"
+    android:id="@+id/progressButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:buttonText="test name"
@@ -44,13 +44,13 @@ public void onClick(View view) {
 }
 ```
 
-##Caution
+## Caution
 This library is created by extending RelativeLayout and not Button and may not provide all the functionalities a normal Button has so using codes like this will cause exception.
 ```java
-(Button) findViewbyId(R.id.my-progress-button);
+(Button) findViewbyId(R.id.progressButton);
 ```
 
-##Thanks
+## Thanks
 Special thanks to https://github.com/pnikosis/materialish-progress as i used this for progress bar in this library.
 
 
