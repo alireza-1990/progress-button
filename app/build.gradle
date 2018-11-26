@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 //apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'kotlin-android'
+
 
 
 android {
@@ -34,4 +36,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.pnikosis:materialish-progress:1.7'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
