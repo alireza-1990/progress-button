@@ -1,12 +1,13 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.novoda.bintray-release'
+
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 28
         versionCode 4
         versionName "1.4.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -18,17 +19,19 @@ android {
         }
     }
 }
+//TODO Novoda for publishing to jCenter disabled due to some conflict with newer version of gradle and
+//TODO it should be fixed or replaced with some other library before publishing.
 
-publish {
-    userOrg = 'alirezaahmadi69'
-    groupId = 'com.alirezaahmadi'
-    artifactId = 'progress-button'
-    publishVersion = '1.4.0'
-    desc = 'A button with loading indicator on it'
-    website = 'https://github.com/alireza-1990/progress-button'
-}
+//publish {
+//    userOrg = 'alirezaahmadi69'
+//    groupId = 'com.alirezaahmadi'
+//    artifactId = 'progress-button'
+//    publishVersion = '1.4.0'
+//    desc = 'A button with loading indicator on it'
+//    website = 'https://github.com/alireza-1990/progress-button'
+//}
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.pnikosis:materialish-progress:1.7'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.pnikosis:materialish-progress:1.7'
 }
