@@ -98,7 +98,6 @@ public class ProgressButtonComponent extends RelativeLayout {
         params.width = size;
         params.height = size;
         progressWheel.setLayoutParams(params);
-
     }
 
     public void setInProgress(boolean inProgress){

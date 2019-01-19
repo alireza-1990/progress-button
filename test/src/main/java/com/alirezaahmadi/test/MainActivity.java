@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.alirezaahmadi.progressbutton.ProgressButtonComponent;
+import com.alirezaahmadi.progressbutton.SomeKotlinClass;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     ProgressButtonComponent progressButtonComponent;
@@ -14,10 +15,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        progressButtonComponent = (ProgressButtonComponent) findViewById(R.id.testBtn);
+//        progressButtonComponent = (ProgressButtonComponent) findViewById(R.id.testBtn);
 
-        progressButtonComponent.setOnClickListener(this);
+//        progressButtonComponent.setOnClickListener(this);
 
+        new SomeKotlinClass().doNothing();
 
     }
 
