@@ -47,8 +47,8 @@ class ProgressButton : RelativeLayout {
                 R.styleable.ProgressButton,
                 0, 0)
         try {
-            buttonResourceId = attributes.getInt(R.styleable.ProgressButton_alzButtonLayoutId, R.layout.button_default)
-            progressbarResourceId = attributes.getInt(R.styleable.ProgressButton_alzProgressLayoutId, R.layout.progress_bar_default)
+            buttonResourceId = attributes.getResourceId(R.styleable.ProgressButton_alzButtonLayoutId, R.layout.button_default)
+            progressbarResourceId = attributes.getResourceId(R.styleable.ProgressButton_alzProgressLayoutId, R.layout.progress_bar_default)
 
             buttonText = attributes.getString(R.styleable.ProgressButton_alzButtonText)
             buttonTextColor = attributes.getColor(R.styleable.ProgressButton_alzButtonTextColor, -1)
