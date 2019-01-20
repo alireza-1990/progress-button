@@ -99,7 +99,7 @@ class ProgressButton : RelativeLayout {
         if(hideTextWhileInProgress) {
             //make the color transparent or convert back  the color from transparent one according to
             //progress state.
-            val textColor = adjustAlpha(button.textColors.defaultColor, if (inProgress) 0f else 1f)
+            val textColor = adjustAlpha(buttonTextColor, if (inProgress) 0f else 1f)
             button.setTextColor(textColor)
         }
 
