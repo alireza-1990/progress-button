@@ -22,10 +22,12 @@ class ProgressButton : RelativeLayout {
 
     override fun onFinishInflate() {
         super.onFinishInflate()
-        button = LayoutInflater.from(context).inflate(buttonResourceid, this, true)
-        progressbar = LayoutInflater.from(context).inflate(progressbarRecourceId, this, true)
-
-//        setInProgress(false)
+        button = LayoutInflater.from(context).inflate(buttonResourceid, this, false).also {
+            addView(it)
+        }
+        progressbar = LayoutInflater.from(context).inflate(progressbarRecourceId, this, false).also {
+            addView(it)
+        }
     }
 
     fun setInProgress(inProgress: Boolean) {

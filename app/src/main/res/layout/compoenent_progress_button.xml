@@ -3,6 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:background="#9C2828"
     >
 
     <TextView
