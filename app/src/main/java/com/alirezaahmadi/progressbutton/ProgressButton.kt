@@ -86,6 +86,11 @@ class ProgressButton : RelativeLayout {
         button.setOnClickListener(clickListener)
     }
 
+    override fun setEnabled(enabled: Boolean) {
+        super.setEnabled(enabled)
+        button.isEnabled = enabled
+    }
+
     /**
      * This function show and hides the [progressView] as well as button text visibility. Text visibility
      * is changed by making the color transparent instead  of other options such as changing the text
