@@ -7,4 +7,14 @@
         <attr name="progressColor" format="color" />
         <attr name="progressWidth" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="ProgressButton">
+        <attr name="alzButtonLayoutId" format="reference"/>
+        <attr name="alzProgressLayoutId" format="reference"/>
+        <attr name="alzButtonText" format="string"/>
+        <attr name="alzButtonTextColor" format="color" />
+        <attr name="alzButtonTextSize" format="dimension" />
+    </declare-styleable>
+
+
 </resources>
