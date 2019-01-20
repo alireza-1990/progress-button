@@ -2,12 +2,14 @@ package com.alirezaahmadi.progressbutton
 
 import android.content.Context
 import android.graphics.Color
+import android.os.Handler
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.RelativeLayout
+import android.widget.Toast
 
 /**
  * This is a Button and a View on top of it. It shows and hides the progress based on the progress state
@@ -80,9 +82,13 @@ class ProgressButton : RelativeLayout {
         setInProgress(false)
     }
 
+    override fun setOnClickListener(clickListener: View.OnClickListener){
+        button.setOnClickListener(clickListener)
+    }
+
     /**
      * This function show and hides the [progressView] as well as button text visibility. Text visibility
-     * is changed by making the color transparent instead  of other options such as changing the  text
+     * is changed by making the color transparent instead  of other options such as changing the text
      * or the text size so the [button] don't change size while showing and hiding the text.
      * @param inProgress determines whether the view should be in inProgress state or a normal one.
      */
@@ -96,6 +102,8 @@ class ProgressButton : RelativeLayout {
             val textColor = adjustAlpha(button.textColors.defaultColor, if (inProgress) 0f else 1f)
             button.setTextColor(textColor)
         }
+
+        button.isClickable = !inProgress
     }
 
     /**
